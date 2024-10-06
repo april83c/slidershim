@@ -96,7 +96,7 @@
 
     await listen("listIps", (event) => {
       ips = (event.payload as Array<string>).filter(
-        (x) => x.split(".").length == 4
+        (x) => x.split(".").length == 4,
       );
     });
 
@@ -143,7 +143,7 @@
         ledWebsocketUrl,
         ledUmgrWebsocketPort,
         ledSerialPort,
-      })
+      }),
     );
     dirty = false;
     console.log("Done");
@@ -174,9 +174,7 @@
   <div class="header-icon">
     <img src="/icon.png" alt="logo" />
   </div>
-  <div class="header">
-    &nbsp;slidershim{versionString}
-  </div>
+  <div class="header">&nbsp;aprils scuffed rpunithm slidershim</div>
   <div class="header-space" />
   <div class="header-timer">
     {timerData}
@@ -197,7 +195,9 @@
           <option value="tasoller-two">GAMO2 Tasoller, 2.0 HID Firmware</option>
           <option value="yuancon">Yuancon Laverita, HID Firmware</option>
           <option value="yubideck">大四 / Yubideck, HID Firmware 1.0</option>
-          <option value="yubideck-three">大四 / Yubideck, HID Firmware 3.0</option>
+          <option value="yubideck-three"
+            >大四 / Yubideck, HID Firmware 3.0</option
+          >
           <option value="diva">Slider over Serial</option>
           <option value="brokenithm">Brokenithm</option>
           <option value="brokenithm-led">Brokenithm + Led</option>

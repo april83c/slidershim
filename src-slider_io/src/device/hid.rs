@@ -209,7 +209,7 @@ impl HidJob {
         state.clone(),
         0x1973,
         0x2001,
-        0x81, // Need to confirm
+        0x83, // 0x81 for real Yubideck, 0x83 for RPUnithm
         0x02, // Need to confirm
         *disable_air,
         |buf, input| {
@@ -324,7 +324,7 @@ impl HidJob {
     info!("Device setting configuration");
     handle.set_active_configuration(1)?;
     info!("Device claiming interface");
-    handle.claim_interface(0)?;
+    handle.claim_interface(2)?;
     self.handle = Some(handle);
     Ok(())
   }
